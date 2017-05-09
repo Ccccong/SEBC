@@ -1,4 +1,4 @@
-#1. Check vm.swappiness on all your nodes Set the value to 1 if necessary
+# 1. Check vm.swappiness on all your nodes Set the value to 1 if necessary
 ```
 [root@ip-172-31-6-7 ~]# ./rallsh.sh "sysctl vm.swappiness"
 cmd=- sysctl vm.swappiness -
@@ -36,7 +36,7 @@ ssh -i  AWS-SEBC-TRAINING.pem root@vm5 "sysctl vm.swappiness=1"
 vm.swappiness = 1
 ```
 
-#2.Show the mount attributes of your volume(s)
+# 2.Show the mount attributes of your volume(s)
 
 Resize2fs /dev/xvde
 
@@ -49,7 +49,7 @@ Filesystem     1M-blocks  Used Available Use% Mounted on
 /dev/xvde          30238   655     28049   3% /
 tmpfs               7506     0      7506   0% /dev/shm
 ```
-#3.If you have ext-based volumes, list the reserve space setting 
+# 3.If you have ext-based volumes, list the reserve space setting 
 ``` 
 [root@ip-172-31-6-7 ~]# dumpe2fs /dev/xvde |more
 dumpe2fs 1.41.12 (17-May-2010)
@@ -70,7 +70,7 @@ Reserved block count:     393145
 Free blocks:              5800759
 Free inodes:              1882305
 ```
-#4.Disable transparent hugepage support
+# 4.Disable transparent hugepage support
 ```
 [root@ip-172-31-3-160 ~]#  cat /sys/kernel/mm/transparent_hugepage/enabled 
 cat: /sys/kernel/mm/transparent_hugepage/enabled: No such file or directory
@@ -86,7 +86,7 @@ HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 ```
-#5.List your network interface configuration
+# 5.List your network interface configuration
 ```
 [root@ip-172-31-6-7 ~]# ifconfig
 eth0      Link encap:Ethernet  HWaddr 0A:76:D3:09:26:92  
@@ -108,7 +108,7 @@ lo        Link encap:Local Loopback
           collisions:0 txqueuelen:0 
           RX bytes:13092 (12.7 KiB)  TX bytes:13092 (12.7 KiB)
 ```
-#6.Show that forward and reverse host lookups are correctly resolved
+# 6.Show that forward and reverse host lookups are correctly resolved
 ```
 [root@ip-172-31-6-7 ~]# getent hosts
 127.0.0.1       localhost.localdomain localhost
@@ -128,7 +128,7 @@ Name:   ip-172-31-6-7.ec2.internal
 Address: 172.31.6.7
 
 ```
-#7.Show the nscd service is running
+# 7.Show the nscd service is running
 ```
 [root@ip-172-31-6-7 ~]# rash "service nscd status"
 Connect to vm1
@@ -147,7 +147,7 @@ Connect to vm5
 ssh -i  AWS-SEBC-TRAINING.pem root@vm5 "service nscd status" 
 nscd (pid 1038) is running... 
 ```
-#8.Show the  ntpd  service is running
+# 8.Show the  ntpd  service is running
 ```
 rash "yum -y install ntp"
 rash "chkconfig ntpd on"
@@ -170,7 +170,7 @@ Connect to vm5
 ssh -i  AWS-SEBC-TRAINING.pem root@vm5 "service ntpd status" 
 ntpd (pid  1114) is running...
 ```
-#9. misc
+# 9. misc
 1 stop selinux
 ```
 ssh -i  AWS-SEBC-TRAINING.pem root@vm1 "cat /etc/selinux/config|grep ^SELINUX" 
