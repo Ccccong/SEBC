@@ -154,15 +154,15 @@ Found 5 items
 ```	
 	Let the other use BDR
 	Schedule backup schedule to replicate.
-	```
+```
 [hdfs@ip-172-31-6-7 conf]$ hdfs dfs -ls /labs/BDR
 Found 1 items
 drwxr-xr-x   - hdfs supergroup          0 2017-05-09 17:22 /labs/BDR/gang1998
 [hdfs@ip-172-31-6-7 conf]$ hdfs dfs -ls /labs/BDR/gang1998
 Found 1 items
 drwxr-xr-x   - hdfs supergroup          0 2017-05-09 17:22 /labs/BDR/gang1998/teragen500MB
-		
-	```
+```
+
 # 6.Browse the results
 	Use hdfs fsck <path> -files -blocks on your source and target directories
 Source:	
