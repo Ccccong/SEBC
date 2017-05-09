@@ -104,7 +104,7 @@ Master_SSL_Verify_Server_Cert: No
 1 row in set (0.00 sec) 
  ```
 
-# 9 Grant user logon from remote
+# 9 Grant user logon from remote host
 ```
 grant all on *.* to 'root'@'%' identified by 'Gmcc1234' with grant option;
 flush privileges;
