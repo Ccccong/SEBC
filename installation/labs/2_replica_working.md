@@ -7,7 +7,6 @@
      yum -y install mysql-connector-java
 ```
 # 2 Modify /etc/my.cnf to support replication
-<div>
 Master node:
 ```
 server-id=1
@@ -20,7 +19,7 @@ server-id=2
 log-bin=mysql-bin
 binlog-format=row
 ```
-</div>
+
 # 3 Start the mysqld service.
 	Start mysql on master and slave
 ```
