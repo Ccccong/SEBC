@@ -50,11 +50,13 @@ mysql> show master status;
 1 row in set (0.00 sec)
 ```
 # 7  Configure a connection to the master from slave:
+	Slave node:
 ```
 mysql> CHANGE MASTER TO MASTER_HOST='vm1', MASTER_USER='repl', MASTER_PASSWORD='slavepass', MASTER_LOG_FILE='mysql-bin.000003', MASTER_LOG_POS=2251 ; 
 Query OK, 0 rows affected (0.02 sec)
 ```
-# 8 Initiate slave operations on the replica
+# 8 Initiate slave operations on the replicate host
+	Slave node:
 ```
 mysql> START SLAVE;
 Query OK, 0 rows affected (0.00 sec)
