@@ -53,7 +53,7 @@
   }
 }[root@ip-172-31-6-7 ~]# 
 ```
-# 4 Verify the Hive status
+4.Verify the Hive status
 ```
 [root@ip-172-31-6-7 ~]# curl -u admin:admin 'http://172.31.6.7:7180/api/v2/clusters/gang1998/services/hive'
 {

@@ -1,8 +1,10 @@
 # command
 [root@ip-172-31-6-7 ~]# curl -u admin:admin 'http://172.31.6.7:7180/api/v2/cm/deployment ' >2_cluster_deployment.md 
+```
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 26920    0 26920    0     0   481k      0 --:--:-- --:--:-- --:--:--  486k
+```
 # output
 ```
 {
