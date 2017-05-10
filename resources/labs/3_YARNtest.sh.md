@@ -7,7 +7,7 @@ HADOOP=/opt/cloudera/parcels/CDH/bin
 
 # Mark start of the loop
 echo Testing loop started on `date`
-round=0
+round=1
 # Mapper containers
 for i in 1 2 4 8    
 do
