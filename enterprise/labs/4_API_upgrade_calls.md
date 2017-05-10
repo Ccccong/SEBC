@@ -1,17 +1,17 @@
 # Use the API on the command line to: 
 # 1.Report the latest available version of the API
 ```
-[root@ip-172-31-6-7 ~]# curl -u admin:admin 'http://172.31.6.7:7180/api/version'
-v14
+[root@ip-172-31-6-7 cloudera-scm-server]# curl -u admin:admin 'http://172.31.6.7:7180/api/version'
+v16
 ```
 # 2. Report the CM version
 ```
-[root@ip-172-31-6-7 ~]# curl -u admin:admin 'http://172.31.6.7:7180/api/v14/cm/version'
+[root@ip-172-31-6-7 cloudera-scm-server]# curl -u admin:admin 'http://172.31.6.7:7180/api/v14/cm/version'
 {
-  "version" : "5.9.2",
+  "version" : "5.11.0",
   "buildUser" : "jenkins",
-  "buildTimestamp" : "20170330-1814",
-  "gitHash" : "822da28bff818f57fc1bfc3eafe3a550300ef1b0",
+  "buildTimestamp" : "20170412-1249",
+  "gitHash" : "70cb1442626406432a6e7af5bdf206a384ca3f98",
   "snapshot" : false
 }
 ```
