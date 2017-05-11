@@ -111,7 +111,7 @@ INFO  : OK
 +------------+--+
 4 rows selected (0.296 seconds)
 ```
-For user ferdinand
+# For user ferdinand
 ```
 [root@ip-172-31-6-7 ~]# kinit ferdinand
 Password for ferdinand@SEBC.COM: 
